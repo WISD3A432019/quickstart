@@ -32,5 +32,26 @@
         </form>
     </div>
 
-    <!-- 代辦：目前任務 -->
+       <!-- 目前任務 -->
+    @if (count($tasks) > 0)
+    <tbody>
+        @foreach ($tasks as $task)
+            <tr>
+                <!-- 任務名稱 -->
+                <td class="table-text">
+                    <div>
+                        {{ $task->name }}
+                    </div>
+                </td>
+                
+                <td>
+                 <!-- 代辦：刪除按鈕 -->
+                </td>
+            </tr>
+        @endforeach
+    </tbody>
+    @endif
+
+  
+
 @endsection
